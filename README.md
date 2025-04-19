@@ -1,31 +1,34 @@
 ```markdown
 # Document Summarizer
 
-This is a simple Python tool to **summarize text content from PDF and DOCX documents** using Facebook's BART model (`facebook/bart-large-cnn`) from Hugging Face Transformers. It extracts text from the document and provides a concise summary.
+A simple Python tool to **summarize text content from PDF and DOCX documents** using Facebook's BART model (`facebook/bart-large-cnn`) via Hugging Face Transformers. It extracts text from the document and provides a concise summary.
+
+---
 
 ## Features
 
-- Supports **PDF** and **DOCX** file formats.
-- Uses a **pretrained transformer model** for high-quality text summarization.
-- Easy to use and extend.
+- Supports **PDF** and **DOCX** file formats
+- Utilizes a **pretrained transformer model** for high-quality text summarization
+- Easy to use and extend
 
 ---
 
 ## Installation
 
-Make sure you have Python 3.7+ installed, then install the required dependencies:
+Ensure you have Python 3.7+ installed, then install the required dependencies:
 
 ```bash
+pip install PyMuPDF transformers torch python-docx
 ```
-pip install fitz PyMuPDF transformers torch python-docx
-```
+
+> **Note**: `PyMuPDF` is imported as `fitz` in Python scripts.
 
 ---
 
 ## Model Used
 
 - **Model**: [`facebook/bart-large-cnn`](https://huggingface.co/facebook/bart-large-cnn)  
-  A powerful encoder-decoder model trained for summarization tasks.
+  A powerful encoder-decoder model trained specifically for summarization tasks.
 
 ---
 
@@ -37,12 +40,12 @@ Run the script and provide the path to your PDF or DOCX file when prompted:
 python summarizer.py
 ```
 
-Example:
+**Example input:**
 ```
 Enter your path: /path/to/document.pdf
 ```
 
-The script will extract the text and output a summary to the terminal.
+The script will extract the text and print the summary to the terminal.
 
 ---
 
@@ -53,9 +56,7 @@ The script will extract the text and output a summary to the terminal.
 
 ---
 
-## Example
-
-If you input a DOCX or PDF document with lengthy paragraphs, the script will output something like:
+## Example Output
 
 **Original (excerpt):**
 > "Artificial intelligence is the simulation of human intelligence processes by machines, especially computer systems..."
@@ -65,20 +66,22 @@ If you input a DOCX or PDF document with lengthy paragraphs, the script will out
 
 ---
 
-##  Notes
+## Notes
 
-- The input document should be under **1024 tokens** for best results due to model constraints.
-- Summarization quality depends on the clarity and structure of the input text.
+- For best results, input documents should be under **1024 tokens** due to model limitations.
+- The quality of the summary depends on the clarity and structure of the input text.
 
 ---
 
 ## Future Improvements
 
-- Add support for `.txt` or other formats.
-- GUI or web interface for easier interaction.
-- Multi-language support.
+- Add support for `.txt` and other formats
+- Develop a GUI or web interface
+- Implement multi-language support
 
 ---
 
 ## License
+
 This project is open-source and available under the MIT License.
+```
