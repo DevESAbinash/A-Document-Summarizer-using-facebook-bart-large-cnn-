@@ -18,6 +18,7 @@ A simple Python tool to **summarize text content from PDF and DOCX documents** u
 Ensure you have Python 3.7+ installed, then install the required dependencies:
 
 ```bash
+``
 pip install PyMuPDF transformers torch python-docx
 ```
 
