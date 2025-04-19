@@ -1,4 +1,3 @@
-```markdown
 # Document Summarizer
 
 A simple Python tool to **summarize text content from PDF and DOCX documents** using Facebook's BART model (`facebook/bart-large-cnn`) via Hugging Face Transformers. It extracts text from the document and provides a concise summary.
